@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.Data", "MapSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.Api", "MapStatistics.Api\MapStatistics.Api.csproj", "{8DBA74D2-455C-4453-B66D-342688995F26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.StatisticsData", "MapStatistics.StatisticsData\MapStatistics.StatisticsData.csproj", "{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8DBA74D2-455C-4453-B66D-342688995F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DBA74D2-455C-4453-B66D-342688995F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DBA74D2-455C-4453-B66D-342688995F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
