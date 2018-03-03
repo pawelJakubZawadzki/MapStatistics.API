@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0A2DDAD-4895-462B-9F8C-43CF5A3E78CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapStatistics.Data</RootNamespace>
+    <AssemblyName>MapStatistics.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbContext\MapStatisticsContext.cs" />
+    <Compile Include="Migrations\201711041231136_AddAreasTable.cs" />
+    <Compile Include="Migrations\201711041231136_AddAreasTable.Designer.cs">
+      <DependentUpon>201711041231136_AddAreasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711041309492_AddBaseDataToAreas.cs" />
+    <Compile Include="Migrations\201711041309492_AddBaseDataToAreas.Designer.cs">
+      <DependentUpon>201711041309492_AddBaseDataToAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182058363_AddContryCodeColumnToAreas.cs" />
+    <Compile Include="Migrations\201711182058363_AddContryCodeColumnToAreas.Designer.cs">
+      <DependentUpon>201711182058363_AddContryCodeColumnToAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182102091_InsertCountryCodesValuesToAreas.cs" />
+    <Compile Include="Migrations\201711182102091_InsertCountryCodesValuesToAreas.Designer.cs">
+      <DependentUpon>201711182102091_InsertCountryCodesValuesToAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191026226_AddIndicatorsTable.cs" />
+    <Compile Include="Migrations\201711191026226_AddIndicatorsTable.Designer.cs">
+      <DependentUpon>201711191026226_AddIndicatorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191102036_AddCodeColumnToIndicator.cs" />
+    <Compile Include="Migrations\201711191102036_AddCodeColumnToIndicator.Designer.cs">
+      <DependentUpon>201711191102036_AddCodeColumnToIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191104245_AddIndicatorBaseData.cs" />
+    <Compile Include="Migrations\201711191104245_AddIndicatorBaseData.Designer.cs">
+      <DependentUpon>201711191104245_AddIndicatorBaseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191117268_AddYearsTable.cs" />
+    <Compile Include="Migrations\201711191117268_AddYearsTable.Designer.cs">
+      <DependentUpon>201711191117268_AddYearsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191120584_AddYearData.cs" />
+    <Compile Include="Migrations\201711191120584_AddYearData.Designer.cs">
+      <DependentUpon>201711191120584_AddYearData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712091507244_InsertIndicatorsData.cs" />
+    <Compile Include="Migrations\201712091507244_InsertIndicatorsData.Designer.cs">
+      <DependentUpon>201712091507244_InsertIndicatorsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712092013056_InsertYears.cs" />
+    <Compile Include="Migrations\201712092013056_InsertYears.Designer.cs">
+      <DependentUpon>201712092013056_InsertYears.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Indicator.cs" />
+    <Compile Include="Models\Year.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Interfaces\IYearsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IIndicatorsRepository.cs" />
+    <Compile Include="Repositories\YearsRepository.cs" />
+    <Compile Include="Repositories\IndicatorsRepository.cs" />
+    <Compile Include="Repositories\AreasRepository.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IAreasRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IBaseRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711041231136_AddAreasTable.resx">
+      <DependentUpon>201711041231136_AddAreasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711041309492_AddBaseDataToAreas.resx">
+      <DependentUpon>201711041309492_AddBaseDataToAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182058363_AddContryCodeColumnToAreas.resx">
+      <DependentUpon>201711182058363_AddContryCodeColumnToAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182102091_InsertCountryCodesValuesToAreas.resx">
+      <DependentUpon>201711182102091_InsertCountryCodesValuesToAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191026226_AddIndicatorsTable.resx">
+      <DependentUpon>201711191026226_AddIndicatorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191102036_AddCodeColumnToIndicator.resx">
+      <DependentUpon>201711191102036_AddCodeColumnToIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191104245_AddIndicatorBaseData.resx">
+      <DependentUpon>201711191104245_AddIndicatorBaseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191117268_AddYearsTable.resx">
+      <DependentUpon>201711191117268_AddYearsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191120584_AddYearData.resx">
+      <DependentUpon>201711191120584_AddYearData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712091507244_InsertIndicatorsData.resx">
+      <DependentUpon>201712091507244_InsertIndicatorsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712092013056_InsertYears.resx">
+      <DependentUpon>201712092013056_InsertYears.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
