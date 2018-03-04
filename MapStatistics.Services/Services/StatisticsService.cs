@@ -1,14 +1,14 @@
 ﻿using Flurl;
-using MapStatistics.StatisticsData.Models;
+using MapStatistics.Services.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System;
 
-namespace MapStatistics.StatisticsData.Services
+namespace MapStatistics.Services.Services
 {
-    public class StatisticsDataService : IStatisticsDataService
+    public class StatisticsService : IStatisticsDataService
     {
         private readonly HttpClient httpClient;
         private const string worldBankUrl = "http://api.worldbank.org";
@@ -16,7 +16,7 @@ namespace MapStatistics.StatisticsData.Services
         private const string indicatorPath = "indicators";
         private const string responseFormat = "json";
 
-        public StatisticsDataService()
+        public StatisticsService()
         {
             httpClient = new HttpClient();
         }

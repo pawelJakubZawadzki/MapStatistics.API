@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.Data", "MapSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.Api", "MapStatistics.Api\MapStatistics.Api.csproj", "{8DBA74D2-455C-4453-B66D-342688995F26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.StatisticsData", "MapStatistics.StatisticsData\MapStatistics.StatisticsData.csproj", "{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapStatistics.Services", "MapStatistics.Services\MapStatistics.Services.csproj", "{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

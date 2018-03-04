@@ -1,7 +1,7 @@
-﻿using MapStatistics.StatisticsData.Models;
+﻿using MapStatistics.Services.Models;
 using System.Threading.Tasks;
 
-namespace MapStatistics.StatisticsData.Services
+namespace MapStatistics.Services.Services
 {
     public interface IStatisticsDataService
     {

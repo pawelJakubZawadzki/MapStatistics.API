@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MapStatistics.StatisticsData.Models
+namespace MapStatistics.Services.Models
 {
     public class StatisticsDataRequest
     {

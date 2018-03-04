@@ -7,8 +7,8 @@
     <ProjectGuid>{FE2D5D3D-BD3C-4430-8DFF-C6EAE5386A0D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MapStatistics.StatisticsData</RootNamespace>
-    <AssemblyName>MapStatistics.StatisticsData</AssemblyName>
+    <RootNamespace>MapStatistics.Services</RootNamespace>
+    <AssemblyName>MapStatistics.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -57,7 +57,7 @@
     <Compile Include="Models\StatisticsData\StatisticData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Interfaces\IStatisticsDataService.cs" />
-    <Compile Include="Services\StatisticsDataService.cs" />
+    <Compile Include="Services\StatisticsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
