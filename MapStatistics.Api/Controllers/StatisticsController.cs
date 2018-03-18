@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace MapStatistics.Api.Controllers
 {
+    [RoutePrefix("api/Statistics")]
     public class StatisticsController : ApiController
     {
         private StatisticsService statisticsService;
@@ -22,17 +23,10 @@ namespace MapStatistics.Api.Controllers
             yearsRepository = new YearsRepository();
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("GetStatistics")]
         public async Task<ResponseModel<List<Statistics>>> GetStatistics(StatisticsDataRequest statisticsDataRequest)
         {
-            //var statisticsDataRequest = new StatisticsDataRequest
-            //{
-            //    CountriesIds = countryCodes,
-            //    IndicatorId = indicator,
-            //    Year = "2016"
-            //};
-
             var statisticsData = await statisticsService.GetStatististicsData(statisticsDataRequest);
             var statistics = statisticsData
                 .StatisticsData
@@ -40,6 +34,7 @@ namespace MapStatistics.Api.Controllers
                 {
                     CountryCode = data.Country?.Id,
                     IndicatorId = data.Indicator?.Id,
+                    Year = data.Year,
                     Value = string.IsNullOrEmpty(data.Value)
                         ? data.DecimalValue
                         : data.Value
