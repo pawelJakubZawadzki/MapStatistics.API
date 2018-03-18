@@ -18,8 +18,8 @@ namespace MapStatistics.Data.Migrations
             ");
 
             Sql(@"UPDATE [dbo].[Areas]
-                SET [CountryCode] = 'Czech Republic'
-                WHERE [Name] = 'CZ'
+                SET [CountryCode] = 'CZ'
+                WHERE [Name] = 'Czech Republic'
             ");
 
             Sql(@"UPDATE [dbo].[Areas]
