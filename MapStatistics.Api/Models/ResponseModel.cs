@@ -1,10 +1,15 @@
-﻿namespace MapStatistics.Api.Models
+﻿using Newtonsoft.Json;
+
+namespace MapStatistics.Api.Models
 {
     public class ResponseModel<T>
     {
+        [JsonProperty("result")]
         public T Result { get; set; }
-        public bool IsSuccess { get; set; }
 
+        [JsonProperty("isSuccess")]
+        public bool IsSuccess { get; set; }
+        
         public ResponseModel(T data)
         {
             Result = data;
