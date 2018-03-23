@@ -28,16 +28,16 @@ namespace MapStatistics.Api.Controllers
         public async Task<ResponseModel<List<Statistics>>> GetStatistics(StatisticsDataRequest statisticsDataRequest)
         {
             var statisticsData = await statisticsService.GetStatististicsData(statisticsDataRequest);
+
             var statistics = statisticsData
                 .StatisticsData
+                .Where(data => !string.IsNullOrEmpty(data.Value) && !string.IsNullOrEmpty(data.Country.Id))
                 .Select(data => new Statistics
                 {
                     CountryCode = data.Country?.Id,
                     IndicatorId = data.Indicator?.Id,
                     Year = data.Year,
-                    Value = string.IsNullOrEmpty(data.Value)
-                        ? data.DecimalValue
-                        : data.Value
+                    Value = data.Value
                 })
                 .ToList();
 
@@ -47,6 +47,7 @@ namespace MapStatistics.Api.Controllers
         [HttpGet]
         [Route("GetIndicators")]
         public ResponseModel<List<Models.Indicator>> GetIndicators()
+
         {
             var indicators = indicatorsRepository
                 .GetAll()

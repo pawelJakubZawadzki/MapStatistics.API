@@ -94,6 +94,14 @@
     <Compile Include="Migrations\201712092013056_InsertYears.Designer.cs">
       <DependentUpon>201712092013056_InsertYears.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803221426554_InsertIndicatorsDataPart2.cs" />
+    <Compile Include="Migrations\201803221426554_InsertIndicatorsDataPart2.Designer.cs">
+      <DependentUpon>201803221426554_InsertIndicatorsDataPart2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221554417_AddAreaData.cs" />
+    <Compile Include="Migrations\201803221554417_AddAreaData.Designer.cs">
+      <DependentUpon>201803221554417_AddAreaData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\Indicator.cs" />
@@ -145,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712092013056_InsertYears.resx">
       <DependentUpon>201712092013056_InsertYears.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221426554_InsertIndicatorsDataPart2.resx">
+      <DependentUpon>201803221426554_InsertIndicatorsDataPart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221554417_AddAreaData.resx">
+      <DependentUpon>201803221554417_AddAreaData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
