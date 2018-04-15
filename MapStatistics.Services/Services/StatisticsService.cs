@@ -8,7 +8,7 @@ using System;
 
 namespace MapStatistics.Services.Services
 {
-    public class StatisticsService : IStatisticsDataService
+    public class StatisticsService : IStatisticsService
     {
         private readonly HttpClient httpClient;
         private const string worldBankUrl = "http://api.worldbank.org";

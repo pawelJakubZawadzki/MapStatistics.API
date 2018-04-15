@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace MapStatistics.Services.Services
 {
-    public interface IStatisticsDataService
+    public interface IStatisticsService
     {
         Task<StatisticsDataResponse> GetStatististicsData(StatisticsDataRequest statisticsDataRequest);
     }

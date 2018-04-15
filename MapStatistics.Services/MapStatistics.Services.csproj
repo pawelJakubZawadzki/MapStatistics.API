@@ -56,7 +56,7 @@
     <Compile Include="Models\StatisticsData\StatisticBaseData.cs" />
     <Compile Include="Models\StatisticsData\StatisticData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Interfaces\IStatisticsDataService.cs" />
+    <Compile Include="Services\Interfaces\IStatisticsService.cs" />
     <Compile Include="Services\StatisticsService.cs" />
   </ItemGroup>
   <ItemGroup>
