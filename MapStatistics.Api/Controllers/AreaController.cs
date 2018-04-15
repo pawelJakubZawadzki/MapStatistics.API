@@ -12,14 +12,14 @@ namespace MapStatistics.Api.Controller
         private IAreasRepository areasRepository;
         private IIndicatorsRepository indicatorsRepository;
         private IYearsRepository yearsRepository;
-        private IStatisticsDataService statisticsDataService;
+        private IStatisticsService statisticsService;
 
-        public AreaController()
+        public AreaController(IAreasRepository areasRepository, IIndicatorsRepository indicatorsRepository, IYearsRepository yearsRepository, IStatisticsService statisticsService)
         {
-            areasRepository = new AreasRepository();
-            indicatorsRepository = new IndicatorsRepository();
-            yearsRepository = new YearsRepository();
-            statisticsDataService = new StatisticsService();
+            this.areasRepository = areasRepository;
+            this.indicatorsRepository = indicatorsRepository;
+            this.yearsRepository = yearsRepository;
+            this.statisticsService = statisticsService;
         }
 
         public ResponseModel<List<Area>> Get()

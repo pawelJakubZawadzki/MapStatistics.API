@@ -12,15 +12,15 @@ namespace MapStatistics.Api.Controllers
     [RoutePrefix("api/Statistics")]
     public class StatisticsController : ApiController
     {
-        private StatisticsService statisticsService;
-        private IndicatorsRepository indicatorsRepository;
-        private YearsRepository yearsRepository;
+        private IStatisticsService statisticsService;
+        private IIndicatorsRepository indicatorsRepository;
+        private IYearsRepository yearsRepository;
 
-        public StatisticsController()
+        public StatisticsController(IStatisticsService statisticsService, IIndicatorsRepository indicatorsRepository, IYearsRepository yearsRepository)
         {
-            statisticsService = new StatisticsService();
-            indicatorsRepository = new IndicatorsRepository();
-            yearsRepository = new YearsRepository();
+            this.statisticsService = statisticsService;
+            this.indicatorsRepository = indicatorsRepository;
+            this.yearsRepository = yearsRepository;
         }
 
         [HttpPost]
